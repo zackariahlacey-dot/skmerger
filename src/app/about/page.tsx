@@ -66,8 +66,8 @@ export default function AboutPage() {
           style={{ backgroundImage: "radial-gradient(ellipse at 70% 50%, rgba(30,144,255,0.12) 0%, transparent 65%)" }}
         />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
             {/* Text side */}
             <div className="animate-fade-in-up delay-100">
@@ -127,7 +127,7 @@ export default function AboutPage() {
 
             {/* Photo side */}
             <div className="animate-fade-in delay-200 flex justify-center md:justify-end">
-              <div className="relative">
+              <div className="relative w-full max-w-xs md:max-w-none" style={{ maxWidth: 320 }}>
                 {/* Glow ring behind photo */}
                 <div
                   className="absolute -inset-3 rounded-2xl"
@@ -135,8 +135,8 @@ export default function AboutPage() {
                 />
                 {/* Photo */}
                 <div
-                  className="relative rounded-2xl overflow-hidden shadow-2xl"
-                  style={{ width: 320, height: 400, border: "1px solid rgba(30,144,255,0.3)" }}
+                  className="relative rounded-2xl overflow-hidden shadow-2xl w-full"
+                  style={{ height: 380, border: "1px solid rgba(30,144,255,0.3)" }}
                 >
                   <Image
                     src="/profilepic.png"
@@ -179,9 +179,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── About Sheldon ────────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
 
             {/* Logo side */}
             <div className="flex justify-center">
@@ -241,9 +241,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Services ─────────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: "#f8fafc" }}>
+      <section className="py-12 sm:py-20" style={{ backgroundColor: "#f8fafc" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 sm:mb-14">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#1e90ff" }}>
               What Sheldon Offers
             </span>
@@ -278,7 +278,7 @@ export default function AboutPage() {
             Our meticulous approach<br />
             <span style={{ color: "#1e90ff" }}>eases your burden.</span>
           </h2>
-          <div className="flex items-center justify-center gap-8 my-6 text-sm font-semibold" style={{ color: "#7eb8f7" }}>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 my-6 text-sm font-semibold" style={{ color: "#7eb8f7" }}>
             <span className="flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#1e90ff" className="w-4 h-4"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
               Smooth Transactions
@@ -299,9 +299,9 @@ export default function AboutPage() {
       </section>
 
       {/* ── Contact ──────────────────────────────────────────── */}
-      <section id="contact" className="py-20" style={{ backgroundColor: "#f8fafc" }}>
+      <section id="contact" className="py-12 sm:py-20" style={{ backgroundColor: "#f8fafc" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-14 items-start">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-start">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#1e90ff" }}>Get In Touch</span>
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-5" style={{ color: "#0c2340" }}>Let&apos;s Talk Business</h2>
@@ -330,7 +330,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-8 border" style={{ borderColor: "#e2e8f0", boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}>
+            <div className="bg-white rounded-2xl p-5 sm:p-8 border" style={{ borderColor: "#e2e8f0", boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}>
               <h3 className="text-lg font-bold mb-6" style={{ color: "#0c2340" }}>Send Sheldon a Message</h3>
               <ContactForm />
             </div>

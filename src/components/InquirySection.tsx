@@ -195,13 +195,25 @@ function SellerForm() {
   const [message, setMessage] = useState("I'd like to discuss listing my store.");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setDone(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "seller", name, email, phone, location, message }),
+      });
+      if (!res.ok) throw new Error("server error");
+      setDone(true);
+    } catch {
+      setError("Something went wrong. Please try again or contact Sheldon directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (done) return <SuccessState message="Sheldon will be in touch within 24 hours to discuss your store and walk you through the process." />;
@@ -238,6 +250,7 @@ function SellerForm() {
           rows={3}
         />
       </div>
+      {error && <p className="text-sm rounded-lg px-4 py-2.5" style={{ color: "#fca5a5", backgroundColor: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)" }}>{error}</p>}
       <SubmitBtn loading={loading} label="Request a Free Consultation" />
     </form>
   );
@@ -251,13 +264,25 @@ function NewMarketForm() {
   const [details, setDetails] = useState("");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setDone(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "newmarket", name, email, market, details }),
+      });
+      if (!res.ok) throw new Error("server error");
+      setDone(true);
+    } catch {
+      setError("Something went wrong. Please try again or contact Sheldon directly.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   if (done) return <SuccessState message="You've been added to the new market candidate list. Sheldon will be in touch as franchise opportunities develop in your area." />;
@@ -297,6 +322,7 @@ function NewMarketForm() {
         />
       </div>
 
+      {error && <p className="text-sm rounded-lg px-4 py-2.5" style={{ color: "#fca5a5", backgroundColor: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)" }}>{error}</p>}
       <SubmitBtn loading={loading} label="Submit My New Market Interest" />
     </form>
   );
@@ -374,7 +400,7 @@ export default function InquirySection() {
   const [active, setActive] = useState<Tab>("buyer");
 
   return (
-    <section id="notify" className="py-16" style={{ backgroundColor: "#0c2340" }}>
+    <section id="notify" className="py-12 sm:py-16" style={{ backgroundColor: "#0c2340" }}>
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -392,13 +418,13 @@ export default function InquirySection() {
         </div>
 
         {/* Tab switcher */}
-        <div className="grid grid-cols-3 gap-3 mb-8">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-8">
           {TABS.map((tab) => (
             <button
               key={tab.id}
               type="button"
               onClick={() => setActive(tab.id)}
-              className="flex flex-col items-center gap-1.5 px-3 py-4 rounded-xl text-center transition-all"
+              className="flex flex-col items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-3 sm:py-4 rounded-xl text-center transition-all"
               style={{
                 border: `1px solid ${active === tab.id ? "#1e90ff" : "rgba(255,255,255,0.12)"}`,
                 backgroundColor: active === tab.id ? "rgba(30,144,255,0.18)" : "rgba(255,255,255,0.04)",
@@ -406,8 +432,8 @@ export default function InquirySection() {
               }}
             >
               <span style={{ color: active === tab.id ? "#1e90ff" : "#64748b" }}>{tab.icon}</span>
-              <span className="font-semibold text-sm">{tab.label}</span>
-              <span className="text-xs leading-tight" style={{ color: active === tab.id ? "#93c5fd" : "#475569" }}>
+              <span className="font-semibold text-xs sm:text-sm leading-tight">{tab.label}</span>
+              <span className="hidden sm:block text-xs leading-tight" style={{ color: active === tab.id ? "#93c5fd" : "#475569" }}>
                 {tab.sub}
               </span>
             </button>
@@ -416,7 +442,7 @@ export default function InquirySection() {
 
         {/* Form panel */}
         <div
-          className="rounded-2xl p-8"
+          className="rounded-2xl p-5 sm:p-8"
           style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}
         >
           {active === "buyer"     && <BuyerForm />}

@@ -54,13 +54,13 @@ export default function HomePage() {
       {/* ── Page header ───────────────────────────────────────── */}
       <section style={{ backgroundColor: "#0c2340", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <div className="flex flex-col gap-5">
             <div>
               <span
                 className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3"
                 style={{ backgroundColor: "rgba(30,144,255,0.18)", color: "#7eb8f7" }}
               >
-                Your Pinch A Penny Pool Store Resale Specialist
+                Pinch A Penny Pool Store Resale Specialist
               </span>
               <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
                 Pool Stores <span style={{ color: "#1e90ff" }}>For Sale</span>
@@ -69,17 +69,17 @@ export default function HomePage() {
                 Sheldon Kirk · FL · TX · AZ · GA · LA · AL · NC · NV
               </p>
             </div>
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:w-auto">
               <a
                 href="#notify"
-                className="btn-glow text-white font-semibold px-5 py-2.5 rounded-lg text-sm"
+                className="btn-glow text-white font-semibold px-5 py-3 rounded-lg text-sm text-center"
                 style={{ backgroundColor: "#1e90ff" }}
               >
                 Buyer / Seller / New Location
               </a>
               <a
                 href="tel:7272348296"
-                className="hidden sm:flex items-center gap-2 font-semibold px-5 py-2.5 rounded-lg text-sm border transition-colors"
+                className="flex items-center justify-center gap-2 font-semibold px-5 py-3 rounded-lg text-sm border transition-colors"
                 style={{ borderColor: "rgba(255,255,255,0.2)", color: "#e2e8f0" }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" style={{ color: "#1e90ff" }}>
@@ -93,7 +93,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Listings ─────────────────────────────────────────── */}
-      <section id="listings" className="py-16" style={{ backgroundColor: "#f8fafc" }}>
+      <section id="listings" className="py-10 sm:py-16" style={{ backgroundColor: "#f8fafc" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#1e90ff" }}>
@@ -175,7 +175,10 @@ export default function HomePage() {
                         ))}
                       </ul>
                       {listing.image && (
-                        <div className="relative shrink-0 rounded-lg overflow-hidden self-start" style={{ width: 160, height: 160, backgroundColor: "#f1f5f9" }}>
+                        <div
+                          className="relative shrink-0 rounded-lg overflow-hidden self-start w-24 h-24 sm:w-36 sm:h-36"
+                          style={{ backgroundColor: "#f1f5f9" }}
+                        >
                           <Image
                             src={listing.image}
                             alt={listing.title}
@@ -215,7 +218,7 @@ export default function HomePage() {
       <InquirySection />
 
       {/* ── Contact ──────────────────────────────────────────── */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-12 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#1e90ff" }}>
@@ -231,7 +234,7 @@ export default function HomePage() {
               <a href="mailto:skmergers@gmail.com" className="font-semibold hover:underline" style={{ color: "#1e90ff" }}>skmergers@gmail.com</a>.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-8 border" style={{ borderColor: "#e2e8f0", boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}>
+          <div className="bg-white rounded-2xl p-5 sm:p-8 border" style={{ borderColor: "#e2e8f0", boxShadow: "0 4px 24px rgba(0,0,0,0.06)" }}>
             <ContactForm />
           </div>
         </div>
