@@ -4,8 +4,8 @@ import ContactForm from "@/components/ContactForm";
 
 const stats = [
   { label: "Years of Experience", value: "15" },
-  { label: "States Served", value: "6" },
-  { label: "Stores Sold", value: "50+" },
+  { label: "States Served", value: "8" },
+  { label: "Response Time", value: "< 24hrs" },
   { label: "Confidential", value: "100%" },
 ];
 
