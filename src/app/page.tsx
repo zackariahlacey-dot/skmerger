@@ -29,11 +29,12 @@ const listings = [
     location: "Margate, Florida",
     state: "Florida",
     image: "/margate.png",
-    annualSales: null,
+    annualSales: "$626,000",
     askingPrice: "$315,000",
     cashflow: "Contact for Details",
     status: "Active",
     highlights: [
+      "$626K in 2025 sales",
       "Consistent retail sales",
       "Undeveloped service territory of 6,500+ pools",
       "Low overhead with high growth potential",
@@ -80,6 +81,26 @@ const listings = [
     ],
     description:
       "A turnkey Pinch A Penny opportunity in the Orlando area with 161 weekly recurring service accounts, multiple revenue streams, and a fully trained team of 8 employees. At $1.25M against $425K in seller's discretionary earnings, this listing offers an exceptional cash-flow-to-price ratio in one of Florida's hottest pool store markets.",
+  },
+  {
+    id: 5,
+    title: "Turn-Key Pinch A Penny Franchise & Service Routes — Metro Orlando!",
+    location: "Polk County, FL",
+    state: "Florida",
+    image: "/orlando.png",
+    annualSales: "$980,511",
+    askingPrice: "$670,000",
+    cashflow: "Contact for Details",
+    status: "Active",
+    highlights: [
+      "ONLY retail pool supply store in town",
+      "Assigned territory of 2,800+ pools to develop",
+      "Efficient 975 sq ft retail footprint with off-site storage",
+      "$40,000 inventory (not included in asking price)",
+      "Owner-operator required — no SBA or conventional financing",
+    ],
+    description:
+      "A consistent, recession-resistant Pinch A Penny franchise in one of Central Florida's fastest-growing communities. Clean, organized, and move-in ready with an assigned territory of 2,800+ pools to further develop service operations — and the only retail pool supply store in town.",
   },
 ];
 
