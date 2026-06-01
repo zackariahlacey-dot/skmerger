@@ -62,6 +62,25 @@ const listings = [
     description:
       "A high-volume, mature franchise operation in Broward County's dense residential pool market — one of the highest pool-per-household concentrations in the country. Over $2M in annual sales, 335 recurring weekly service accounts, and a full team of owner-operators, retail, and field staff make this a turnkey acquisition with immediate, substantial cash flow.",
   },
+  {
+    id: 4,
+    title: "Pinch A Penny – Orlando Area",
+    location: "Orlando Area, FL",
+    state: "Florida",
+    image: "/PAP generic.jpg",
+    annualSales: null,
+    askingPrice: "$1,250,000",
+    cashflow: "$425,000",
+    status: "Active",
+    highlights: [
+      "161 recurring weekly service accounts",
+      "Multiple revenue streams: retail, cleaning, repairs/installs & resurfacing",
+      "Turnkey operation with 8 trained employees in place",
+      "Under 3.00x cashflow in one of Florida's hottest pool store markets",
+    ],
+    description:
+      "A turnkey Pinch A Penny opportunity in the Orlando area with 161 weekly recurring service accounts, multiple revenue streams, and a fully trained team of 8 employees. At $1.25M against $425K in seller's discretionary earnings, this listing offers an exceptional cash-flow-to-price ratio in one of Florida's hottest pool store markets.",
+  },
 ];
 
 const statusStyles: Record<string, React.CSSProperties> = {
