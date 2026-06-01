@@ -13,6 +13,7 @@ const listings = [
     askingPrice: "$545,000",
     cashflow: null,
     status: "Active",
+    underContract: true,
     highlights: [
       "Consistent sales growth since 2017",
       "Established retail leader in the market",
@@ -39,6 +40,27 @@ const listings = [
     ],
     description:
       "A compelling Pinch-A-Penny opportunity in Margate, FL with consistent retail performance and a massively underdeveloped pool service territory of over 6,500 pools. The low overhead structure makes this an ideal acquisition for an owner-operator looking to scale service revenue quickly.",
+  },
+  {
+    id: 3,
+    title: "South FL – Premium Retail Pool Store with Service Routes!",
+    location: "Broward County, FL",
+    state: "Florida",
+    image: "/florida pool store.webp",
+    annualSales: "$2,100,000",
+    askingPrice: "$1,350,000",
+    cashflow: "$474,950",
+    status: "Active",
+    highlights: [
+      "Cash Flow (SDE): $474,950",
+      "335 recurring weekly pool service accounts",
+      "Full service: chemicals, equipment, cleaning, repair & resurfacing",
+      "Long-term lease through October 2030",
+      "$400,000 seller financing available for qualified buyers",
+      "Owner-operator required — not SBA eligible",
+    ],
+    description:
+      "A high-volume, mature franchise operation in Broward County's dense residential pool market — one of the highest pool-per-household concentrations in the country. Over $2M in annual sales, 335 recurring weekly service accounts, and a full team of owner-operators, retail, and field staff make this a turnkey acquisition with immediate, substantial cash flow.",
   },
 ];
 
@@ -119,6 +141,14 @@ export default function HomePage() {
                   className="card-lift bg-white rounded-2xl overflow-hidden"
                   style={{ border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.07)" }}
                 >
+                  {listing.underContract && (
+                    <div
+                      className="px-6 py-2 text-center text-sm font-bold uppercase tracking-widest"
+                      style={{ backgroundColor: "#facc15", color: "#0c2340" }}
+                    >
+                      Under Contract
+                    </div>
+                  )}
                   {/* Card header */}
                   <div
                     className="px-6 py-5"

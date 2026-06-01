@@ -62,19 +62,16 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => {
-              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href.replace("/#contact", ""));
-              return (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm font-medium transition-colors"
-                  style={{ color: isActive ? "#ffffff" : "#94a3b8" }}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium transition-colors"
+                style={{ color: "#ffffff" }}
+              >
+                {link.label}
+              </Link>
+            ))}
             <a
               href="tel:7272348296"
               className="btn-glow flex items-center gap-2 text-white text-sm font-semibold px-4 py-2 rounded-md"
