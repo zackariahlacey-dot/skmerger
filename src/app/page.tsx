@@ -5,25 +5,6 @@ import InquirySection from "@/components/InquirySection";
 
 const listings = [
   {
-    id: 1,
-    title: "Pinch-A-Penny – Houston, TX",
-    location: "Houston – Harris County",
-    state: "Texas",
-    annualSales: "$1,300,000",
-    askingPrice: "$545,000",
-    cashflow: null,
-    status: "Active",
-    underContract: true,
-    highlights: [
-      "Consistent sales growth since 2017",
-      "Established retail leader in the market",
-      "Pool cleaning, repairs & resurfacing services",
-      "Turnkey operation with trained staff",
-    ],
-    description:
-      "A well-established Pinch-A-Penny franchise in Houston's Harris County with consistent year-over-year revenue growth since 2017. This location offers both retail pool supply sales and a full suite of service offerings including pool cleaning, repairs, and resurfacing — making it a diversified, recession-resistant business.",
-  },
-  {
     id: 2,
     title: "Pinch-A-Penny – Margate, FL",
     location: "Margate, Florida",
@@ -48,7 +29,7 @@ const listings = [
     location: "Broward County, FL",
     state: "Florida",
     image: "/florida pool store.webp",
-    annualSales: "$2,100,000",
+    annualSales: null,
     askingPrice: "$1,350,000",
     cashflow: "$474,950",
     status: "Active",
@@ -101,6 +82,66 @@ const listings = [
     ],
     description:
       "A consistent, recession-resistant Pinch A Penny franchise in one of Central Florida's fastest-growing communities. Clean, organized, and move-in ready with an assigned territory of 2,800+ pools to further develop service operations — and the only retail pool supply store in town.",
+  },
+  {
+    id: 6,
+    title: "Pinch A Penny – Duval County",
+    location: "Duval County, FL",
+    state: "Florida",
+    image: "/papbasic1.jpg",
+    annualSales: "$1,230,000",
+    askingPrice: "$720,000",
+    cashflow: null,
+    status: "Active",
+    highlights: [
+      "126 active weekly pool service accounts in place",
+      "Upscale plaza surrounded by strong household income demographics",
+      "Lease secured through 2029 with low occupancy costs",
+      "Organized 6–7 person team across retail, cleaning, and repair departments",
+    ],
+    description:
+      "A well-established Pinch A Penny in a high-traffic, high average household income demographic, backed by a stable base of weekly service accounts & huge upside to develop service! Seeking an owner-operator to combine steady retail, weekly cleaning, and repair/resurfacing revenue streams in a great, growing market.",
+  },
+  {
+    id: 7,
+    title: "Pinch A Penny – North Central Florida",
+    location: "North Central Florida",
+    state: "Florida",
+    image: "/papbasic2.jpg",
+    annualSales: "$2.1M–$2.5M",
+    askingPrice: "$1,030,000",
+    cashflow: null,
+    status: "Active",
+    highlights: [
+      "$2.1M–$2.5M consistent historical revenue",
+      "154 weekly service accounts within a 3,500-pool territory",
+      "6 service vehicles + 2 trailers included - all the infrastructure ready for growth!",
+      "Long-term, affordable lease in a high-demand market - RARE opportunity!",
+    ],
+    description:
+      "A long-established Pinch A Penny with consistently high revenue, a large retail space, plus reliable management roles in place for an incoming buyer. Comes with a sizable, underdeveloped service territory and the fleet/staffing already in place to grow it, plus a long-term, affordable lease that locks in stability for years to come.",
+  },
+  {
+    id: 8,
+    title: "Pinch A Penny – Miami",
+    location: "Miami, Florida",
+    state: "Florida",
+    image: "/papbasic1.jpg",
+    annualSales: "$662,000",
+    askingPrice: "$249,000",
+    cashflow: null,
+    status: "Active",
+    highlights: [
+      "$662K in 2025 sales",
+      "51 weekly recurring pool service accounts",
+      "$8,000/month in recurring service revenue",
+      "Two service trucks included in sale",
+      "Experienced, trained staff in place",
+      "Prime territory covering The Roads, Coconut Grove & Coral Gables",
+      "Priced for quick sale",
+    ],
+    description:
+      "A rare, priced-to-sell Pinch A Penny opportunity in one of Miami's most desirable service territories. This location combines steady retail performance with a well-developed pool service route of 51 weekly accounts generating $8,000 in recurring monthly revenue. Complete with two service trucks and an experienced, trained staff already in place, this is a true turnkey acquisition for an owner-operator ready to step in and run.",
   },
 ];
 
@@ -253,6 +294,7 @@ export default function HomePage() {
                             src={listing.image}
                             alt={listing.title}
                             fill
+                            sizes="(max-width: 640px) 96px, 144px"
                             className="object-contain"
                           />
                         </div>
