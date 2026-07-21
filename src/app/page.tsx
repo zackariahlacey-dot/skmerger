@@ -11,7 +11,7 @@ const listings = [
     state: "Florida",
     image: "/margate.png",
     annualSales: "$626,000",
-    askingPrice: "$315,000",
+    askingPrice: "$265,000",
     cashflow: "Contact for Details",
     status: "Active",
     highlights: [
@@ -70,7 +70,7 @@ const listings = [
     state: "Florida",
     image: "/orlando.png",
     annualSales: "$980,511",
-    askingPrice: "$670,000",
+    askingPrice: "$590,000",
     cashflow: "Contact for Details",
     status: "Active",
     highlights: [
