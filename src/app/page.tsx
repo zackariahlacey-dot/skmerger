@@ -222,7 +222,7 @@ export default function HomePage() {
                   className="card-lift bg-white rounded-2xl overflow-hidden"
                   style={{ border: "1px solid #e2e8f0", boxShadow: "0 2px 8px rgba(0,0,0,0.07)" }}
                 >
-                  {listing.underContract && (
+                  {"underContract" in listing && listing.underContract && (
                     <div
                       className="px-6 py-2 text-center text-sm font-bold uppercase tracking-widest"
                       style={{ backgroundColor: "#facc15", color: "#0c2340" }}
